@@ -1,0 +1,11 @@
+apiVersion: eventing.knative.dev/v1beta2
+kind: EventType
+metadata:
+  name: average.resource.consumption
+spec:
+  reference:
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    name: current-time
+  description: "This tells you the current time in RFC3339 format"
+  type: "current.time"

@@ -35,6 +35,7 @@ fi
 
 (cd tools/resource-cost-calculator && func deploy -n $CHAT_NAMESPACE "${func_args[@]}")
 (cd tools/average-resource-consumption && func deploy -n $CHAT_NAMESPACE "${func_args[@]}")
+(cd tools/current-time && func deploy -n $CHAT_NAMESPACE "${func_args[@]}")
 
 (cd core/request-proxy && ko apply -f ./config -- -n $CHAT_NAMESPACE)
 kubectl apply -f ./core/chat-app/config -n $CHAT_NAMESPACE

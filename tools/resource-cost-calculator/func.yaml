@@ -9,7 +9,7 @@ build:
   builder: pack
 deploy:
   namespace: default
-  image: quay.io/cali0707/resource-cost-calculator@sha256:9cb1f997faf9f191485772ee8a0ed3d478e57be1942aad5c821ffbc725010e2a
+  image: quay.io/cali0707/resource-cost-calculator@sha256:0097614a53d8d1f69b7817fc4b5eb0f033007e0ad4df57a674f86877a74ee097
   subscriptions:
   - source: chat-broker
     filters:

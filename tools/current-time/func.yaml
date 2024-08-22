@@ -1,0 +1,15 @@
+specVersion: 0.36.0
+name: current-time
+runtime: go
+registry: quay.io/cali0707
+created: 2024-08-21T15:06:56.446347059-04:00
+invoke: cloudevent
+build:
+  builder: pack
+deploy:
+  namespace: default
+  image: quay.io/cali0707/current-time@sha256:bcd85b5ab15da5b05bfde146019ee21152051ef904549f1f86d19414205467ce
+  subscriptions:
+  - source: chat-broker
+    filters:
+      type: current.time
