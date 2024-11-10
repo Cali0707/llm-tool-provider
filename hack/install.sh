@@ -10,6 +10,8 @@ fi
 
 if [[ $OPENSHIFT ]]; then
 	func_args=("-b=s2i" "--build")
+elif [[ $OSTYPE == "darwin"* ]]; then
+	func_args=("-b=s2i" "--platform=linux/arm64" "--build")
 else
 	func_args=()
 fi

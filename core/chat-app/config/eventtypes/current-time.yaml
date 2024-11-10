@@ -1,7 +1,7 @@
 apiVersion: eventing.knative.dev/v1beta2
 kind: EventType
 metadata:
-  name: average.resource.consumption
+  name: current.time
 spec:
   reference:
     apiVersion: serving.knative.dev/v1

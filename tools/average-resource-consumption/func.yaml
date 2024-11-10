@@ -2,14 +2,15 @@ specVersion: 0.36.0
 name: average-resource-consumption
 runtime: go
 registry: quay.io/cali0707
+image: quay.io/cali0707/average-resource-consumption:latest
 namespace: default
 created: 2024-06-25T14:08:48.57074338-04:00
 invoke: cloudevent
 build:
-  builder: pack
+  builder: s2i
 deploy:
   namespace: default
-  image: quay.io/cali0707/average-resource-consumption@sha256:1e8a756a4a96beaddac7a38b5cf0d3e2212fdd9b7fd19f00dc0a41883e028623
+  image: quay.io/cali0707/average-resource-consumption@sha256:ed3be98a469ad62dcb550c9c75d246d2c33ad63c57467745007e3ffc3332c558
   subscriptions:
   - source: chat-broker
     filters:

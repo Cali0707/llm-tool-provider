@@ -2,13 +2,15 @@ specVersion: 0.36.0
 name: current-time
 runtime: go
 registry: quay.io/cali0707
+image: quay.io/cali0707/current-time:latest
+namespace: default
 created: 2024-08-21T15:06:56.446347059-04:00
 invoke: cloudevent
 build:
-  builder: pack
+  builder: s2i
 deploy:
   namespace: default
-  image: quay.io/cali0707/current-time@sha256:bcd85b5ab15da5b05bfde146019ee21152051ef904549f1f86d19414205467ce
+  image: quay.io/cali0707/current-time@sha256:ff87395fc123156905eaf0dcd6dbf3672859e26ac191f219541ba1c73bfedd1c
   subscriptions:
   - source: chat-broker
     filters:
